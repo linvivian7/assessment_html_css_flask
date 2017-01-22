@@ -1,0 +1,11 @@
+{% extends 'base.html' %}
+
+{% block title %} Application Acknowledged {% endblock %}
+
+{% block content %}
+  <h2>Your application has been processed.</h2>
+
+  <h3>Thank you {{ first_name }} {{ last_name }}, for applying to be a {{ role }}. Your
+    minimum salary requirement is ${{ salary }}. Have a nice day! </h3></br>
+
+{% endblock %}

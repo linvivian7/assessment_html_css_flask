@@ -1,0 +1,39 @@
+{% extends 'base.html' %}
+
+{% block title %}Application Form{% endblock %}
+
+{% block content %}
+
+  <h3>Ubermelon Application Portal</h3>
+
+  <h4>Ubermelon is expanding quickly, and we are actively searching for new
+    talent. If you wish to apply for the available jobs listed here, please
+    fill out the form below and we will get back to you. We hold all of our 
+    melons up to the highest standards, and expect employees to have the same
+    drive to make melons accessible to everyone. Serious applicants only.</h4></br>
+
+  <form action='/application-success' method="POST">
+
+    <label for="firstname">First Name</label><br>
+    <input type="text" id="firstname" name="firstname" required><br><br>
+
+    <label for="lastname">Last Name</label><br>
+    <input type="text" id="lastname" name="lastname" required><br><br>
+
+    <label for="jobrole">Please select job role here:</label><br>
+    <select id="jobrole" name="role" required>
+      {% for job in jobs %}
+      <option value="{{ job }}">{{ job }}</option>
+      {% endfor %}
+    </select><br><br>
+
+    <label for="salaryreq">Minimum Salary Requirement </label><br>
+    <input type="number" min="0" max="2000000" id="salaryreq" name="salaryreq" required><br><br>
+
+    <input type="reset" name="reset" value="Reset">
+    <input type="submit" name="submit" value="Submit Search">
+
+  </form>
+
+{% endblock %}
+

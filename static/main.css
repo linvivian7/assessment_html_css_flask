@@ -1,0 +1,29 @@
+/* CSS for Ubermelon Website */
+
+h3 {
+  color: green;
+}
+
+h4 {
+  border: 1px dashed green;
+}
+
+#lastname {
+  font-weight: bold;
+}
+
+form {
+  font-size: 13px;
+}
+
+input[type="number"] {
+  background-color: #FFFFE0;
+}
+
+input[type="text"], textarea {
+  background-color: #FFFFE0;
+}
+
+footer {
+  font-size: 12px;
+}
